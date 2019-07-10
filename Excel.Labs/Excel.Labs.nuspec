@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/doxa-labs/ExcelLabs</projectUrl>
+    <iconUrl>https://www.iconfinder.com/icons/104853/download/png/512</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>First version with simple console log.</releaseNotes>
+    <copyright>Doxa Labs @ Copyright 2019</copyright>
+    <tags>Excel Office C# IO</tags>
+  </metadata>
+</package>

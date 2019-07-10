@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs", "Excel.Labs\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.Tests", "Excel.Labs.Tests\Excel.Labs.Tests.csproj", "{C0EE4D01-4B2E-4684-81DC-ACC298597509}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.Demo", "Excel.Labs.Demo\Excel.Labs.Demo.csproj", "{F7865782-3D3D-4328-8B78-CEF60812EADC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
