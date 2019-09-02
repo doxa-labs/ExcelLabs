@@ -1,4 +1,6 @@
 ﻿using System;
+// Self
+using Doxa.Labs.Excel.Models;
 
 namespace Excel.Labs.Demo
 {

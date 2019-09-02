@@ -1,4 +1,8 @@
-﻿namespace Excel.Labs.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Doxa.Labs.Excel.Models
 {
     public class Column
     {

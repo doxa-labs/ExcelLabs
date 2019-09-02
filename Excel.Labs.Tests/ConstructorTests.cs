@@ -1,4 +1,6 @@
 ﻿using Xunit;
+// Self
+using Doxa.Labs.Excel.Models;
 
 namespace Excel.Labs.Tests
 {

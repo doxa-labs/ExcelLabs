@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Excel.Labs\Excel.Labs.csproj">
-      <Project>{44786878-4758-4d25-b754-62184dde64dd}</Project>
+      <Project>{3c7322e2-416c-480f-b523-c062ef5da24b}</Project>
       <Name>Excel.Labs</Name>
     </ProjectReference>
   </ItemGroup>
