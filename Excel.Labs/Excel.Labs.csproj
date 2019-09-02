@@ -4,6 +4,21 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Doxa.Labs.Excel</RootNamespace>
     <ApplicationIcon>doxalabs-logo.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
+    <Authors>Doxa Labs</Authors>
+    <Company>Doxa Labs</Company>
+    <Product>Doxa Lab's Excel Tools</Product>
+    <Description>This tool provides a C# based solution to create Excel files without complex queries. This package supports Android, iOS, Linux, macOS and Windows.</Description>
+    <Copyright>2019</Copyright>
+    <PackageProjectUrl>http://doxalabs.co.uk</PackageProjectUrl>
+    <PackageIconUrl>https://avatars1.githubusercontent.com/u/52411323?s=400&amp;u=01d58ee15bd0a27d272d1eec49dfd6fb47bd1c6f&amp;v=4</PackageIconUrl>
+    <RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageTags>Excel Office xls xlsx IO C# Microsoft Interop Dataset .NETStandard</PackageTags>
+    <PackageReleaseNotes>This version supports .NET Standard 2.0</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
