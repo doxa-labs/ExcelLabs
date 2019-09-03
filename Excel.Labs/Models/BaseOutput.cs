@@ -1,25 +1,23 @@
-﻿using System.ComponentModel;
-
-namespace Doxa.Labs.Excel.Models
+﻿namespace Doxa.Labs.Excel.Models
 {
     public class BaseOutput
     {
-        string Title;
-        string Path;
-        Extension Extension;
+        public string Title;
+        public string Path;
+        public string Extension;
         public BaseOutput(string title, string path, Extension extension)
         {
             Title = title;
             Path = path;
-            Extension = extension;
-        }
-    }
 
-    public enum Extension
-    {
-        [field: Description(".xls")]
-        Xls,
-        [field: Description(".xls")]
-        Xlsx
+            // set extension
+            switch (extension)
+            {
+                case Models.Extension.Xls: Extension = ".xls";
+                    break;
+                case Models.Extension.Xlsx: Extension = ".xlsx";
+                    break;
+            }
+        }
     }
 }

@@ -8,8 +8,9 @@ namespace Excel.Labs.Demo
     {
         static void Main(string[] args)
         {
-            Output output = new Output("Hi");
-            output.Log();
+            BaseOutput bo = new BaseOutput("title", "path", Extension.Xls);
+            Console.WriteLine(bo.Extension);
+
             Console.ReadLine();
         }
     }
