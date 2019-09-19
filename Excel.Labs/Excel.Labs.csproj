@@ -6,7 +6,7 @@
     <ApplicationIcon>doxalabs-logo.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Doxa Labs</Authors>
     <Company>Doxa Labs</Company>
     <Product>Doxa Lab's Excel Tools</Product>
