@@ -51,8 +51,20 @@ namespace Doxa.Labs.Excel.Models
         {
             try
             {
+                // check cellList
+                if (cells == null)
+                {
+                    throw new NullCellListException("Cell List cannot be Null.");
+                }
+
                 foreach (LabsCell item in cells)
                 {
+                    // check for 0 index
+                    if (item.RowIndex == 0 || item.ColumnIndex == 0)
+                    {
+                        throw new ZeroIndexException("RowIndex or ColumnIndex cannot be Zero.");
+                    }
+
                     _worksheet.Cells[item.RowIndex, item.ColumnIndex] = item.Value;
                 }
 

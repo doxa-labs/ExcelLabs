@@ -16,15 +16,17 @@ namespace Excel.Labs.Demo
             // Console.WriteLine(bo.Extension);
             Console.WriteLine(excel.FilePath);
 
+            
             List<LabsCell> cells = new List<LabsCell>();
+            /*
             for (int i = 1; i < 20; i++)
             {
-                LabsCell c = new LabsCell() { RowIndex = i, ColumnIndex = i, Value = i };
-                cells.Add(c);
+                cells.Add(new LabsCell(i, i, i));
             }
+            */
 
             // save excel file
-            excel.Save(cells);
+            excel.Save(null);
 
             Console.ReadLine();
         }
