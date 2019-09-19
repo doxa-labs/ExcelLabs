@@ -1,37 +1,78 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/doxa-labs/ExcelLabs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<a href="https://github.com/doxa-labs/ExcelLabs/actions"><img alt="GitHub Actions status" src="https://github.com/doxa-labs/ExcelLabs/workflows/CI/badge.svg"></a>
+[![Version](https://img.shields.io/nuget/v/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs)
+[![Downloads](https://img.shields.io/nuget/dt/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Welcome to Excel Labs
 
-### Markdown
+ExcelLabs is an Excel Helper library written in C#. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Features
 
-```markdown
-Syntax highlighted code block
+This tool provides a C# based solution to create Excel files without complex queries. This package supports Android, iOS, Linux, macOS and Windows.
 
-# Header 1
-## Header 2
-### Header 3
+### Installation
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+#### NuGet Package Manager
+```C#
+PM> Install-Package Excel.Labs
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### .NET CLI
+```C#
+> dotnet add package Excel.Labs
+```
 
-### Jekyll Themes
+### Definition
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/doxa-labs/ExcelLabs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Model
+```C#
+public class LabsCell
+{
+   public int RowIndex { get; set; }
+   public int ColumnIndex { get; set; }
+   public dynamic Value { get; set; }
+}
+```
+
+#### Usage
+```markdown
+1. Init ExcelLabs
+2. Create a Cell List
+3. Add Some Data
+4. Call Save Function
+```
+
+```C#
+// excel filename
+string title = "Excel Labs NuGet";
+// where do you want to save?
+// you can define subfolder too
+string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
+
+// init
+ExcelLabs excel = new ExcelLabs(title, path, Extension.Xls);
+
+// create a cell list
+List<LabsCell> cells = new List<LabsCell>();
+
+// define row and column indexes then add your data
+cells.Add(new LabsCell(10, 20, "Your Value"));
+
+// add some data to cell list
+for (int i = 1; i < 20; i++)
+{
+   cells.Add(new LabsCell(i, i, i));
+}
+
+// call save function with the cell list
+excel.Save(cells);
+```
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Please visit http://doxalabs.co.uk
+
+### License
+
+Excel Labs is released under the MIT license.
