@@ -1,24 +1,24 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-// Excel
+using System.Runtime.InteropServices;
+// Excel - NuGet
 using ExcelApp = Microsoft.Office.Interop.Excel;
 
 namespace Doxa.Labs.Excel.Models
 {
-    public class Output
+    public class ExcelLabs
     {
         // Excel
         private readonly ExcelApp.Application _app;
-        private readonly ExcelApp.Workbook _workbook;
-        // Excel - set from outside
-        private readonly ExcelApp.Worksheet _worksheet;
+        public readonly ExcelApp.Workbook _workbook;
+        public readonly ExcelApp.Worksheet _worksheet;
 
         // Class Library
         public readonly string Title;
         public readonly string FilePath;
         public readonly string Extension;
-        public Output(string title, string path, Extension extension)
+        public ExcelLabs(string title, string path, Extension extension)
         {
             // set title
             Title = title;
@@ -35,41 +35,51 @@ namespace Doxa.Labs.Excel.Models
             }
 
             // set path
-            FilePath = Path.Combine(path, @"Files\" + title + Extension);
+            FilePath = Path.Combine(path, title + Extension);
 
-            // create excel app
+            // create excel app and worksheet
             _app = new ExcelApp.Application();
             _workbook = _app.Workbooks.Add();
             _worksheet = (ExcelApp.Worksheet)_workbook.Worksheets[1];
         }
 
-        public void SaveExcelFile(List<Cell> cells)
+        /// <summary>
+        /// Gets the data as List<Cell> and Save as an Excel File
+        /// </summary>
+        /// <param name="cells"></param>
+        public void Save(List<LabsCell> cells)
         {
             try
             {
-                foreach (Cell item in cells)
+                foreach (LabsCell item in cells)
                 {
                     _worksheet.Cells[item.RowIndex, item.ColumnIndex] = item.Value;
                 }
 
-                // save and close
+                // save
                 _workbook.SaveAs(FilePath);
-                _workbook.Close(true, Type.Missing, Type.Missing);
-                _app.Quit();
+                
+                // cleanup
+                Marshal.FinalReleaseComObject(_worksheet);
 
-                // clean
+                _workbook.Close(Type.Missing, Type.Missing, Type.Missing);
+                Marshal.FinalReleaseComObject(_workbook);
+
+                _app.Quit();
+                Marshal.FinalReleaseComObject(_app);
+
+                // first run
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+                // second run
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
-        }
-
-        private static int CalculateStringWidth(string text)
-        {
-            return text.Length + 1;
         }
     }
 }

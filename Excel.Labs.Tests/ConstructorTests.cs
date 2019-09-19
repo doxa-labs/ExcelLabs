@@ -13,10 +13,20 @@ namespace Excel.Labs.Tests
             string data = "sample";
 
             // Act
-            Output output = new Output("sample");
+            ExcelLabs output = new ExcelLabs("sample", "path", Extension.Xls);
 
             // Assert
-            Assert.Equal(data, output.Log());
+            Assert.Equal(data, output.Title);
+        }
+
+        [Fact]
+        public void Constructor_Worksheet_Should_Not_Be_Null()
+        {
+            // Act
+            ExcelLabs output = new ExcelLabs("sample", "path", Extension.Xls);
+
+            // Assert
+            Assert.NotNull(output._worksheet);
         }
     }
 }

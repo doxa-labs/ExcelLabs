@@ -10,22 +10,21 @@ namespace Excel.Labs.Demo
         static void Main(string[] args)
         {
             string title = "Excel Labs NuGet";
-            string path = AppDomain.CurrentDomain.BaseDirectory;
+            string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
 
-            Output bo = new Output(title, path, Extension.Xls);
+            ExcelLabs excel = new ExcelLabs(title, path, Extension.Xls);
             // Console.WriteLine(bo.Extension);
-            // Console.WriteLine(bo.FilePath);
+            Console.WriteLine(excel.FilePath);
 
-            List<Cell> cells = new List<Cell>();
-
+            List<LabsCell> cells = new List<LabsCell>();
             for (int i = 1; i < 20; i++)
             {
-                Cell c = new Cell() { RowIndex = 1, ColumnIndex = i, Value = i };
+                LabsCell c = new LabsCell() { RowIndex = i, ColumnIndex = i, Value = i };
                 cells.Add(c);
             }
 
-            // save excel
-            bo.SaveExcelFile(cells);
+            // save excel file
+            excel.Save(cells);
 
             Console.ReadLine();
         }
