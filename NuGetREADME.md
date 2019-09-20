@@ -82,6 +82,8 @@ cells.Add(new Cellx(3, "Notepad"));
 // call save function
 ExcelLabs.SaveFile(title, path, sheetName, cells);
 ```
+#### Screenshot
+![Image](http://fatihyildizhan.com/others/excel-labsl-output.jpg)
 
 ### Support or Contact
 
