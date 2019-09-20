@@ -9,30 +9,34 @@ namespace Excel.Labs.Tests
     public class ExcelLabsTests
     {
         [Theory]
-        [InlineData(0, 1, "Test Value")]
-        [InlineData(1, 0, "Test Value")]
-        [InlineData(0, 0, "Test Value")]
-        public void Save_Throws_Exception_When_Index_Zero(int rowIndex, int columnIndex, dynamic value)
+        [InlineData(0, "Test Value", "A")]
+        public void Save_Throws_Exception_When_RowIndex_Zero(int rowIndex, string value, string columnName)
         {
             // Arrange
-            ExcelLabs excel = new ExcelLabs("Excel.Labs", "path", Extension.Xls);
+            string title = "Title";
+            string path = "Path";
+            string sheetName = "Sheet Name";
 
             // Act
-            List<LabsCell> cells = new List<LabsCell>();
-            cells.Add(new LabsCell(rowIndex, columnIndex, value));
+            List<Cellx> cells = new List<Cellx>();
+            cells.Add(new Cellx(rowIndex, value, columnName));
 
             // Assert
-            Assert.Throws<ZeroIndexException>(() => excel.Save(cells));
+            Assert.Throws<ZeroIndexException>(() => ExcelLabs.SaveFile(title, path, sheetName, cells));
         }
 
         [Fact]
         public void Save_Throws_Exception_When_CellList_Null()
         {
             // Arrange
-            ExcelLabs excel = new ExcelLabs("Excel.Labs", "path", Extension.Xls);
+            string title = "Title";
+            string path = "Path";
+            string sheetName = "Sheet Name";
+
+            // Act
 
             // Assert
-            Assert.Throws<NullCellListException>(() => excel.Save(null));
+            Assert.Throws<NullCellListException>(() => ExcelLabs.SaveFile(title, path, sheetName, null));
         }
     }
 }

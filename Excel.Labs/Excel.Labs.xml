@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Excel.Labs</name>
+    </assembly>
+    <members>
+        <member name="T:Doxa.Labs.Excel.Models.Cellx">
+            <summary>
+            OpenXml Cell Wrapper
+            </summary>
+        </member>
+        <member name="P:Doxa.Labs.Excel.Models.Cellx.RowIndex">
+            <summary>
+            Row Number
+            </summary>
+        </member>
+        <member name="P:Doxa.Labs.Excel.Models.Cellx.ColumnName">
+            <summary>
+            Column name like A, B, C, AA, AB
+            </summary>
+        </member>
+        <member name="P:Doxa.Labs.Excel.Models.Cellx.Value">
+            <summary>
+            Your data as String or Number
+            </summary>
+        </member>
+        <member name="M:Doxa.Labs.Excel.Models.Cellx.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="value"></param>
+            <param name="columnName"></param>
+        </member>
+        <member name="T:Doxa.Labs.Excel.Models.ExcelLabs">
+            <summary>
+            Create Excel File Simple and Fast.
+            </summary>
+        </member>
+        <member name="M:Doxa.Labs.Excel.Models.ExcelLabs.SaveFile(System.String,System.String,System.String,System.Collections.Generic.List{Doxa.Labs.Excel.Models.Cellx})">
+            <summary>
+            Gets data as a Cellx List format and Save the Excel file as .xlsx
+            </summary>
+            <param name="title"></param>
+            <param name="path"></param>
+            <param name="sheetName"></param>
+            <param name="cells"></param>
+        </member>
+        <member name="M:Doxa.Labs.Excel.Models.ExcelLabs.ResolveCellDataTypeOnValue(System.String)">
+            <summary>
+            Detects the correct value type
+            </summary>
+            <param name="text"></param>
+            <returns>Returns the correct value type</returns>
+        </member>
+        <member name="T:Doxa.Labs.Excel.Models.ZeroIndexException">
+            <summary>
+            Throws when RowIndex is Zero
+            </summary>
+        </member>
+        <member name="M:Doxa.Labs.Excel.Models.ZeroIndexException.#ctor(System.String)">
+            <summary>
+            Throws when RowIndex is Zero
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Doxa.Labs.Excel.Models.NullCellListException">
+            <summary>
+            Throws when Cell List is null
+            </summary>
+        </member>
+        <member name="M:Doxa.Labs.Excel.Models.NullCellListException.#ctor(System.String)">
+            <summary>
+            Throws when Cell List is null
+            </summary>
+            <param name="message"></param>
+        </member>
+    </members>
+</doc>

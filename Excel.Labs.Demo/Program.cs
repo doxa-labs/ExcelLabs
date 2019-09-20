@@ -12,25 +12,47 @@ namespace Excel.Labs.Demo
             string title = "Excel Labs NuGet";
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
 
-            ExcelLabs excel = new ExcelLabs(title, path, Extension.Xls);
-            // Console.WriteLine(bo.Extension);
-            Console.WriteLine(excel.FilePath);
+            // 1. create a cell list
+            List<Cellx> cells = new List<Cellx>();
 
-            // create a cell list
-            List<LabsCell> cells = new List<LabsCell>();
+            // 2. values as an array
+            List<string> languages = new List<string>() {
+                "Java", // A
+                "C#", // B
+                "Javascript", // C
+                "Swift", // D
+                "Php", // E
+                "Python", // F
+                "Go", // G
+                "Swift", // H
+                "", // I
+                "", // J
+                "", // K
+                "Objective-C", // L
+                "C++", // M
+                "F#"}; // N
 
-            // define row and column indexes then add your data
-            cells.Add(new LabsCell(10, 20, "Your Value"));
-
-            // add some data to cell list
-            for (int i = 1; i < 20; i++)
+            foreach (string lang in languages)
             {
-                cells.Add(new LabsCell(i, i, i));
+                // no column name for ordered columns
+                cells.Add(new Cellx(1, lang));
             }
 
-            // call save function with the cell list
-            excel.Save(cells);
+            // 3. single value with column name
+            cells.Add(new Cellx(2, "Fortran", "A"));
+            cells.Add(new Cellx(2, "Cobol", "D"));
+            cells.Add(new Cellx(2, "Pascal", "I"));
 
+            // 4. single value without column name
+            cells.Add(new Cellx(3, "Visual Studio"));
+            cells.Add(new Cellx(3, "Webstorm"));
+            cells.Add(new Cellx(3, "XCode"));
+            cells.Add(new Cellx(3, "Notepad"));
+
+            // call save function
+            ExcelLabs.SaveFile(title, path, "Simple and Fast", cells);
+
+            Console.WriteLine("done.");
             Console.ReadLine();
         }
     }

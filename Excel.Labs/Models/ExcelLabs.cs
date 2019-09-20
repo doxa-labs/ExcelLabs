@@ -1,96 +1,125 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-// Excel - NuGet
-using ExcelApp = Microsoft.Office.Interop.Excel;
+// OpenXml - NuGet
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Doxa.Labs.Excel.Models
 {
+    /// <summary>
+    /// Create Excel File Simple and Fast.
+    /// </summary>
     public class ExcelLabs
     {
-        // Excel
-        private readonly ExcelApp.Application _app;
-        public readonly ExcelApp.Workbook _workbook;
-        public readonly ExcelApp.Worksheet _worksheet;
-
-        // Class Library
-        public readonly string Title;
-        public readonly string FilePath;
-        public readonly string Extension;
-        public ExcelLabs(string title, string path, Extension extension)
-        {
-            // set title
-            Title = title;
-
-            // set extension
-            switch (extension)
-            {
-                case Models.Extension.Xls:
-                    Extension = ".xls";
-                    break;
-                case Models.Extension.Xlsx:
-                    Extension = ".xlsx";
-                    break;
-            }
-
-            // set path
-            FilePath = Path.Combine(path, title + Extension);
-
-            // create excel app and worksheet
-            _app = new ExcelApp.Application();
-            _workbook = _app.Workbooks.Add();
-            _worksheet = (ExcelApp.Worksheet)_workbook.Worksheets[1];
-        }
-
         /// <summary>
-        /// Gets the data as List<Cell> and Save as an Excel File
+        /// Gets data as a Cellx List format and Save the Excel file as .xlsx
         /// </summary>
+        /// <param name="title"></param>
+        /// <param name="path"></param>
+        /// <param name="sheetName"></param>
         /// <param name="cells"></param>
-        public void Save(List<LabsCell> cells)
+        public static void SaveFile(string title, string path, string sheetName, List<Cellx> cells)
         {
             try
             {
-                // check cellList
+                // check for null cell list
                 if (cells == null)
                 {
-                    throw new NullCellListException("Cell List cannot be Null.");
+                    throw new NullCellListException("Cell List cannot be null.");
                 }
 
-                foreach (LabsCell item in cells)
+                // check for rowindex == 0
+                if (cells.Exists(a => a.RowIndex == 0))
                 {
-                    // check for 0 index
-                    if (item.RowIndex == 0 || item.ColumnIndex == 0)
+                    throw new ZeroIndexException("RowIndex should be greater than 0. It starts from 1.");
+                }
+
+                // generate the full path
+                string fullPath = Path.Combine(path, title + ".xlsx");
+
+                using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(fullPath, SpreadsheetDocumentType.Workbook))
+                {
+                    // add a WorkbookPart to the document.
+                    WorkbookPart workbookpart = spreadsheetDocument.AddWorkbookPart();
+                    workbookpart.Workbook = new Workbook();
+
+                    // add a WorksheetPart to the WorkbookPart.
+                    WorksheetPart worksheetPart = workbookpart.AddNewPart<WorksheetPart>();
+                    SheetData sheetData = new SheetData();
+                    worksheetPart.Worksheet = new Worksheet(sheetData);
+
+                    // add Sheets to the Workbook.
+                    Sheets sheets = spreadsheetDocument.WorkbookPart.Workbook.AppendChild<Sheets>(new Sheets());
+
+                    // append a new worksheet and associate it with the workbook.
+                    Sheet sheet = new Sheet()
                     {
-                        throw new ZeroIndexException("RowIndex or ColumnIndex cannot be Zero.");
+                        Id = spreadsheetDocument.WorkbookPart.GetIdOfPart(worksheetPart),
+                        SheetId = 1,
+                        Name = sheetName
+                    };
+
+                    int tempRow = 0;
+                    Row row = new Row();
+                    foreach (Cellx item in cells)
+                    {
+                        if (tempRow != item.RowIndex)
+                        {
+                            if (tempRow != 0)
+                            {
+                                sheetData.Append(row);
+                            }
+
+                            // init row with row index
+                            row = new Row() { RowIndex = (uint)item.RowIndex };
+
+                            // save row index
+                            tempRow = item.RowIndex;
+                        }
+
+                        string cellReference = item.ColumnName + item.RowIndex;
+                        // columnName = -1 for ordered columns
+                        if (item.ColumnName == "-1")
+                        {
+                            cellReference = item.ColumnName;
+                        }
+
+                        row.Append(new Cell() { CellReference = cellReference, CellValue = new CellValue(item.Value), DataType = ResolveCellDataTypeOnValue(item.Value).Value });
                     }
 
-                    _worksheet.Cells[item.RowIndex, item.ColumnIndex] = item.Value;
+                    // append last row
+                    sheetData.Append(row);
+
+                    sheets.Append(sheet);
+                    workbookpart.Workbook.Save();
+
+                    // close the document.
+                    spreadsheetDocument.Close();
                 }
-
-                // save
-                _workbook.SaveAs(FilePath);
-                
-                // cleanup
-                Marshal.FinalReleaseComObject(_worksheet);
-
-                _workbook.Close(Type.Missing, Type.Missing, Type.Missing);
-                Marshal.FinalReleaseComObject(_workbook);
-
-                _app.Quit();
-                Marshal.FinalReleaseComObject(_app);
-
-                // first run
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
-
-                // second run
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Detects the correct value type
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns>Returns the correct value type</returns>
+        private static EnumValue<CellValues> ResolveCellDataTypeOnValue(string text)
+        {
+            int intVal;
+            double doubleVal;
+            if (int.TryParse(text, out intVal) || double.TryParse(text, out doubleVal))
+            {
+                return CellValues.Number;
+            }
+            else
+            {
+                return CellValues.String;
             }
         }
     }
