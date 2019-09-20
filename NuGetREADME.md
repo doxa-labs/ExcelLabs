@@ -43,7 +43,7 @@ string sheetName = "Simple and Fast";
 string path = AppDomain.CurrentDomain.BaseDirectory;
 
 // 1. create a cell list
-List<Cellx> cells = new List<Cell>();
+List<Cellx> cells = new List<Cellx>();
 
 // 2. values as an array
 List<string> languages = new List<string>() {
@@ -60,7 +60,8 @@ List<string> languages = new List<string>() {
     "", // K
     "Objective-C", // L
     "C++", // M
-    "F#"};
+    "F#" // N
+    };
     
 foreach (string lang in languages)
 {
