@@ -27,46 +27,65 @@ PM> Install-Package Excel.Labs
 
 #### Model
 ```C#
-public class LabsCell
+public class Cellx
 {
    public int RowIndex { get; set; }
-   public int ColumnIndex { get; set; }
-   public dynamic Value { get; set; }
+   public string ColumnName { get; set; }
+   public string Value { get; set; }
 }
 ```
 
 #### Usage
 ```markdown
-1. Init ExcelLabs
-2. Create a Cell List
-3. Add Some Data
-4. Call Save Function
+1. Create a Cell List
+2. Add Some Data
+3. Call SaveFile Function
 ```
 
 ```C#
-// excel filename
 string title = "Excel Labs NuGet";
-// where do you want to save?
-// you can define subfolder too
-string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
+string sheetName = "Simple and Fast";
+string path = AppDomain.CurrentDomain.BaseDirectory;
 
-// init
-ExcelLabs excel = new ExcelLabs(title, path, Extension.Xls);
+// 1. create a cell list
+List<Cellx> cells = new List<Cell>();
 
-// create a cell list
-List<LabsCell> cells = new List<LabsCell>();
-
-// define row and column indexes then add your data
-cells.Add(new LabsCell(10, 20, "Your Value"));
-
-// add some data to cell list
-for (int i = 1; i < 20; i++)
+// 2. values as an array
+List<string> languages = new List<string>() {
+    "Java", // A
+    "C#", // B
+    "Javascript", // C
+    "Swift", // D
+    "Php", // E
+    "Python", // F
+    "Go", // G
+    "Swift", // H
+    "", // I
+    "", // J
+    "", // K
+    "Objective-C", // L
+    "C++", // M
+    "F#"};
+    
+foreach (string lang in languages)
 {
-   cells.Add(new LabsCell(i, i, i));
+    // no column name for ordered columns
+    cells.Add(new Cellx(1, lang));
 }
 
-// call save function with the cell list
-excel.Save(cells);
+// 3. single value with column name
+cells.Add(new Cellx(2, "Fortran", "A"));
+cells.Add(new Cellx(2, "Cobol", "D"));
+cells.Add(new Cellx(2, "Pascal", "I"));
+
+// 4. single value without column name
+cells.Add(new Cellx(3, "Visual Studio"));
+cells.Add(new Cellx(3, "Webstorm"));
+cells.Add(new Cellx(3, "XCode"));
+cells.Add(new Cellx(3, "Notepad"));
+
+// call save function
+ExcelLabs.SaveFile(title, path, sheetName, cells);
 ```
 
 ### Support or Contact
