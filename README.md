@@ -1,5 +1,7 @@
 
 <a href="https://github.com/doxa-labs/ExcelLabs/actions"><img alt="GitHub Actions status" src="https://github.com/doxa-labs/ExcelLabs/workflows/CI/badge.svg"></a>
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/18e1532454fc48549b95726d6c3cde2a)](https://www.codacy.com/manual/fatihyildizhan/ExcelLabs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=doxa-labs/ExcelLabs&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/doxa-labs/ExcelLabs/badge.svg?branch=master)](https://coveralls.io/github/doxa-labs/ExcelLabs?branch=master)
 [![Version](https://img.shields.io/nuget/v/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs)
 [![Downloads](https://img.shields.io/nuget/dt/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs)
 
