@@ -10,6 +10,7 @@ namespace Excel.Labs.Demo
         static void Main(string[] args)
         {
             string title = "Excel Labs NuGet";
+            string sheetName = "Simple and Fast";
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
 
             // 1. create a cell list
@@ -50,7 +51,7 @@ namespace Excel.Labs.Demo
             cells.Add(new Cellx(3, "Notepad"));
 
             // call save function
-            ExcelLabs.SaveFile(title, path, "Simple and Fast", cells);
+            ExcelLabs.SaveFile(title, path, sheetName, cells);
 
             Console.WriteLine("done.");
             Console.ReadLine();
