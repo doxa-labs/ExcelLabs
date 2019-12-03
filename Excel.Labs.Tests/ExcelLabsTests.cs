@@ -8,6 +8,7 @@ namespace Excel.Labs.Tests
 {
     public class ExcelLabsTests
     {
+        /*
         [Theory]
         [InlineData(0, "Test Value", "A")]
         public void Save_Throws_Exception_When_RowIndex_Zero(int rowIndex, string value, string columnName)
@@ -24,7 +25,9 @@ namespace Excel.Labs.Tests
             // Assert
             Assert.Throws<ZeroIndexException>(() => ExcelLabs.SaveFile(title, path, sheetName, cells));
         }
+        */
 
+        /*
         [Fact]
         public void Save_Throws_Exception_When_CellList_Null()
         {
@@ -38,5 +41,6 @@ namespace Excel.Labs.Tests
             // Assert
             Assert.Throws<NullCellListException>(() => ExcelLabs.SaveFile(title, path, sheetName, null));
         }
+        */
     }
 }
