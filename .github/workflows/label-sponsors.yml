@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: JasonEtco/is-sponsor-label-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO }}
+          GITHUB_TOKEN: ${{ secrets.sponsor_label }}
