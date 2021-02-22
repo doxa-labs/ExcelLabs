@@ -95,7 +95,7 @@ ExcelLabs.SaveFile(title, path, sheetName, cells);
 
 ### Support or Contact
 
-Please visit http://doxalabs.co.uk
+Please visit https://doxalabs.co.uk
 
 ### License
 
