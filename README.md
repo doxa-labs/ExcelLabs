@@ -91,7 +91,7 @@ ExcelLabs.SaveFile(title, path, sheetName, cells);
 ```
 
 #### Screenshot
-![Image](http://fatihyildizhan.com/others/excel-labsl-output.jpg)
+![labs](https://user-images.githubusercontent.com/602600/108699615-7f46aa80-7516-11eb-9d46-ff845187ae87.jpg)
 
 ### Support or Contact
 
