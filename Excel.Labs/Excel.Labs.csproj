@@ -6,23 +6,22 @@
     <ApplicationIcon>doxalabs-logo.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>2.0.0</Version>
-    <Authors>Doxa Labs</Authors>
-    <Company>Doxa Labs</Company>
+    <Version>2.1.0</Version>
+    <Authors>Doxa Labs Ltd</Authors>
+    <Company>Doxa Labs Ltd</Company>
     <Product>Doxa Lab's Excel Tools</Product>
     <Description>This tool provides a C# based solution to create Excel files Simple and Fast. This package supports Android, iOS, Linux, macOS and Windows.</Description>
-    <Copyright>2019</Copyright>
-    <PackageProjectUrl>http://doxalabs.co.uk</PackageProjectUrl>
-    <PackageIconUrl>https://avatars1.githubusercontent.com/u/52411323?s=400&amp;u=01d58ee15bd0a27d272d1eec49dfd6fb47bd1c6f&amp;v=4</PackageIconUrl>
+    <Copyright>© 2019-2021 Doxa Labs Ltd. All Rights Reserved.</Copyright>
+    <PackageProjectUrl>https://doxalabs.co.uk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageTags>Excel Office xls xlsx IO C# OpenXml Dataset .NETStandard</PackageTags>
-    <PackageReleaseNotes>Using OpenXml to create Excel files.</PackageReleaseNotes>
+    <PackageReleaseNotes>.NET 5 &amp; .NET Framework Demo</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Doxa\Documents\Developer\GitHub\DoxaLabs\ExcelLabs\Excel.Labs\Excel.Labs.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\fatih\Documents\GitHub\doxa-labs\ExcelLabs\Excel.Labs\Excel.Labs.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

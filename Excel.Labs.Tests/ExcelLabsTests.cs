@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 // Xunit - NuGet
 using Xunit;
-// Self
+// team
 using Doxa.Labs.Excel.Models;
 
 namespace Excel.Labs.Tests

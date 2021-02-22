@@ -3,7 +3,7 @@ using System.Collections.Generic;
 // team
 using Doxa.Labs.Excel.Models;
 
-namespace Excel.Labs.Demo
+namespace Excel.Labs.NET5Demo
 {
     class Program
     {
@@ -14,7 +14,7 @@ namespace Excel.Labs.Demo
 
             // TODO: create a folder named Files to run this demo
             // TODO: or, you may change the path
-            // TODO: fullpath: C:\Users\...\ExcelLabs\Excel.Labs.Demo\bin\Debug\Files
+            // TODO: full path: C:\Users\...\ExcelLabs\Excel.Labs.NET5Demo\bin\Debug\net5.0\Files
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
 
             // 1. create a cell list

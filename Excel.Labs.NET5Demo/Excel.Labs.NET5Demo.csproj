@@ -1,41 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-
-    <IsPackable>false</IsPackable>
-
-    <Copyright>© 2019-2021 Doxa Labs Ltd. All Rights Reserved.</Copyright>
-
-    <Authors>Doxa Labs Ltd</Authors>
-
-    <Product>Doxa Lab's Excel Tools</Product>
-
-    <Description>This tool provides a C# based solution to create Excel files Simple and Fast. This package supports Android, iOS, Linux, macOS and Windows.</Description>
-
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
     <Version>2.1.0</Version>
-
+    <Authors>Doxa Labs Ltd</Authors>
+    <Company>Doxa Labs Ltd</Company>
+    <Product>Doxa Lab's Excel Tools</Product>
+    <Description>This tool provides a C# based solution to create Excel files Simple and Fast. This package supports Android, iOS, Linux, macOS and Windows.</Description>
+    <Copyright>© 2019-2021 Doxa Labs Ltd. All Rights Reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-
     <PackageProjectUrl>https://doxalabs.co.uk</PackageProjectUrl>
-
     <RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
-
     <RepositoryType>git</RepositoryType>
-
     <PackageTags>Excel Office xls xlsx IO C# OpenXml Dataset .NETStandard</PackageTags>
-
     <PackageReleaseNotes>.NET 5 &amp; .NET Framework Demo</PackageReleaseNotes>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Excel.Labs\Excel.Labs.csproj" />
