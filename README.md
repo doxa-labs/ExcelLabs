@@ -1,7 +1,23 @@
-[![Sponsorship](https://img.shields.io/badge/funding-github-%23EA4AAA)](https://github.com/sponsors/doxa-labs)
-<a href="https://github.com/doxa-labs/ExcelLabs/actions"><img alt="GitHub Actions status" src="https://github.com/doxa-labs/ExcelLabs/workflows/CI/badge.svg"></a>
-[![Version](https://img.shields.io/nuget/v/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs)
-[![Downloads](https://img.shields.io/nuget/dt/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/602600/144003492-52eb4611-acaf-4f42-94bf-236b252264c8.png" style="max-width:100%;" height="140" />
+</p>
+
+| Source     | Badges                |
+| :------- | :------------------------- |
+| `Sponsorship` | [![Sponsorship](https://img.shields.io/badge/funding-github-%23EA4AAA)](https://github.com/sponsors/doxa-labs) |
+| `Workflows` | <a href="https://github.com/doxa-labs/ExcelLabs/actions"><img alt="GitHub Actions status" src="https://github.com/doxa-labs/ExcelLabs/workflows/CI/badge.svg"></a> |
+| `Stats` | [![Version](https://img.shields.io/nuget/v/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs) [![Downloads](https://img.shields.io/nuget/dt/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs) |
+| `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)|
+| `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/doxa-labs/ExcelLabs) ![GitHub contributors](https://img.shields.io/github/contributors/doxa-labs/ExcelLabs) ![GitHub last commit](https://img.shields.io/github/last-commit/doxa-labs/ExcelLabs) ![GitHub search hit counter](https://img.shields.io/github/search/doxa-labs/ExcelLabs/ExcelLabs) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/doxa-labs/ExcelLabs) ![GitHub repo size](https://img.shields.io/github/repo-size/doxa-labs/ExcelLabs)|
+| `Languages` | ![GitHub top language](https://img.shields.io/github/languages/top/doxa-labs/ExcelLabs) |
+| `Issue Tracking` | ![GitHub issues](https://img.shields.io/github/issues/doxa-labs/ExcelLabs) ![GitHub closed issues](https://img.shields.io/github/issues-closed/doxa-labs/ExcelLabs) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/doxa-labs/ExcelLabs) ![GitHub pull requests](https://img.shields.io/github/issues-pr/doxa-labs/ExcelLabs) |
+
+***
+
+## Give a Star 🌟
+If you want to support **ExcelLabs** then you may give a star or be one of the sponsors.
+
+***
 
 ## Welcome to Excel Labs
 
