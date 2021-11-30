@@ -14,14 +14,15 @@ namespace Excel.Labs.NET5Demo
 
             // TODO: create a folder named Files to run this demo
             // TODO: or, you may change the path
-            // TODO: full path: C:\Users\...\ExcelLabs\Excel.Labs.NET5Demo\bin\Debug\net5.0\Files
+            // TODO: full path: C:\Users\...\ExcelLabs\Excel.Labs.NET5Demo\bin\Debug\net6.0\Files
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
 
             // 1. create a cell list
-            List<Cellx> cells = new List<Cellx>();
+            List<Cellx> cells = new();
 
             // 2. values as an array
-            List<string> languages = new List<string>() {
+            List<string> languages = new()
+            {
                 "Java", // A
                 "C#", // B
                 "Javascript", // C
@@ -35,7 +36,8 @@ namespace Excel.Labs.NET5Demo
                 "", // K
                 "Objective-C", // L
                 "C++", // M
-                "F#"}; // N
+                "F#" // N
+            };
 
             foreach (string lang in languages)
             {
@@ -57,7 +59,7 @@ namespace Excel.Labs.NET5Demo
             // call save function
             ExcelLabs.SaveFile(title, path, sheetName, cells);
 
-            Console.WriteLine("done.");
+            Console.WriteLine("Done. Check the path now to see the Excel file.");
             Console.ReadLine();
         }
     }
