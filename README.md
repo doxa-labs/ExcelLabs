@@ -5,7 +5,7 @@
 | Source     | Badges                |
 | :------- | :------------------------- |
 | `Sponsorship` | [![Sponsorship](https://img.shields.io/badge/funding-github-%23EA4AAA)](https://github.com/sponsors/doxa-labs) |
-| `Workflows` | <a href="https://github.com/doxa-labs/ExcelLabs/actions"><img alt="GitHub Actions status" src="https://github.com/doxa-labs/ExcelLabs/workflows/CI/badge.svg"></a> |
+| `Workflows` | [![Workflow-Build-and-Test](https://github.com/doxa-labs/ExcelLabs/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/doxa-labs/ExcelLabs/actions/workflows/workflow.yml) |
 | `Stats` | [![Version](https://img.shields.io/nuget/v/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs) [![Downloads](https://img.shields.io/nuget/dt/Excel.Labs.svg?style=flat-square)](https://www.nuget.org/packages/Excel.Labs) |
 | `License` | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)|
 | `Github Activity` | ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/doxa-labs/ExcelLabs) ![GitHub contributors](https://img.shields.io/github/contributors/doxa-labs/ExcelLabs) ![GitHub last commit](https://img.shields.io/github/last-commit/doxa-labs/ExcelLabs) ![GitHub search hit counter](https://img.shields.io/github/search/doxa-labs/ExcelLabs/ExcelLabs) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/doxa-labs/ExcelLabs) ![GitHub repo size](https://img.shields.io/github/repo-size/doxa-labs/ExcelLabs)|
