@@ -35,7 +35,8 @@ namespace Excel.Labs.Demo
                 "", // K
                 "Objective-C", // L
                 "C++", // M
-                "F#"}; // N
+                "F#" // N
+            };
 
             foreach (string lang in languages)
             {
@@ -57,7 +58,7 @@ namespace Excel.Labs.Demo
             // call save function
             ExcelLabs.SaveFile(title, path, sheetName, cells);
 
-            Console.WriteLine("done.");
+            Console.WriteLine("Done. Check the path now to see the Excel file.");
             Console.ReadLine();
         }
     }
