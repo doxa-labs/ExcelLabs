@@ -115,4 +115,3 @@ Please visit https://doxalabs.co.uk
 ### License
 
 Excel Labs is released under the MIT license.
-2023
