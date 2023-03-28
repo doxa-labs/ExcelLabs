@@ -13,6 +13,7 @@ namespace Doxa.Labs.Excel.Models
         /// <param name="message"></param>
         public ZeroIndexException(string message) : base(message)
         {
+
         }
     }
 
@@ -27,6 +28,7 @@ namespace Doxa.Labs.Excel.Models
         /// <param name="message"></param>
         public NullCellListException(string message) : base(message)
         {
+
         }
     }
 }
