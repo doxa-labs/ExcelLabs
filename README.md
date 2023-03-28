@@ -98,7 +98,7 @@ cells.Add(new Cellx(2, "Pascal", "I"));
 // 4. single value without column name
 cells.Add(new Cellx(3, "Visual Studio"));
 cells.Add(new Cellx(3, "Webstorm"));
-cells.Add(new Cellx(3, "XCode"));
+cells.Add(new Cellx(3, "Xcode"));
 cells.Add(new Cellx(3, "Notepad"));
 
 // call save function
