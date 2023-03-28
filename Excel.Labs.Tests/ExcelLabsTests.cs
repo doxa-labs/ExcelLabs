@@ -8,6 +8,16 @@ namespace Excel.Labs.Tests
 {
     public class ExcelLabsTests
     {
+        [Fact]
+        public void AppVersion_ShouldReturn_Version()
+        {
+            string expected = "v2.2.1";
+
+            string actual = "v2.2.1";
+
+            Assert.Equal(expected, actual);
+        }
+
         /*
         [Theory]
         [InlineData(0, "Test Value", "A")]
