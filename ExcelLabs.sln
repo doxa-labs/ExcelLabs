@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.Tests", "Excel.Labs.Tests\Excel.Labs.Tests.csproj", "{C0EE4D01-4B2E-4684-81DC-ACC298597509}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.Demo", "Excel.Labs.Demo\Excel.Labs.Demo.csproj", "{F7865782-3D3D-4328-8B78-CEF60812EADC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs", "Excel.Labs\Excel.Labs.csproj", "{3C7322E2-416C-480F-B523-C062EF5DA24B}"
@@ -13,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.NET5Demo", "Exce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.NET6Demo", "Excel.Labs.NET6Demo\Excel.Labs.NET6Demo.csproj", "{9FE32C4E-2C1A-4E45-95B2-D3D07D509BB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.NET7Demo", "Excel.Labs.NET7Demo\Excel.Labs.NET7Demo.csproj", "{290D59A3-4EAB-4944-8C4E-7B6B8F017116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.NET7Demo", "Excel.Labs.NET7Demo\Excel.Labs.NET7Demo.csproj", "{290D59A3-4EAB-4944-8C4E-7B6B8F017116}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0EE4D01-4B2E-4684-81DC-ACC298597509}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7865782-3D3D-4328-8B78-CEF60812EADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
