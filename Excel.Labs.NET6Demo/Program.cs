@@ -13,6 +13,11 @@ string sheetName = "Simple and Fast";
 // TODO: full path: C:\Users\...\ExcelLabs\Excel.Labs.NET5Demo\bin\Debug\net6.0\Files
 string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
 
+if (!Directory.Exists(path))
+{
+    Directory.CreateDirectory(path);
+}
+
 // 1. create a cell list
 List<Cellx> cells = new();
 
@@ -32,7 +37,8 @@ List<string> languages = new()
     "", // K
     "Objective-C", // L
     "C++", // M
-    "F#" // N
+    "F#", // N
+    "2024 June" // O
 };
 
 foreach (string lang in languages)

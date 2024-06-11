@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+
 // team
 using Doxa.Labs.Excel.Models;
 
@@ -16,6 +18,11 @@ namespace Excel.Labs.Demo
             // TODO: or, you may change the path
             // TODO: fullpath: C:\Users\...\ExcelLabs\Excel.Labs.Demo\bin\Debug\Files
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
 
             // 1. create a cell list
             List<Cellx> cells = new List<Cellx>();
@@ -35,7 +42,8 @@ namespace Excel.Labs.Demo
                 "", // K
                 "Objective-C", // L
                 "C++", // M
-                "F#" // N
+                "F#", // N
+                "2024 June" // O
             };
 
             foreach (string lang in languages)

@@ -95,7 +95,12 @@ namespace Doxa.Labs.Excel.Models
                     workbookpart.Workbook.Save();
 
                     // close the document.
-                    spreadsheetDocument.Close();
+                    // Close() is obsolete on DocumentFormat.OpenXml 3.0.2 due to some crash
+                    // Check for the details https://github.com/dotnet/Open-XML-SDK/releases/tag/v3.0.2
+                    //spreadsheetDocument.Close();
+
+                    // started using Dispose instead of Close with 3.0.2
+                    spreadsheetDocument.Dispose();
                 }
             }
             catch (System.Exception ex)

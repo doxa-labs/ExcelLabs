@@ -2,10 +2,10 @@
 using Doxa.Labs.Excel.Models;
 
 // See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello to new .NET7 Console Template!");
+Console.WriteLine("Hello to new .NET8 Console Template!");
 
 // define variables
-string title = "Excel Labs NuGet";
+string title = "Excel Labs NuGet " + DateTime.Now.ToString("dd.MM.yyyy HH.mm.ss");
 string sheetName = "Simple and Fast";
 
 // TODO: create a folder named Files to run this demo
@@ -19,11 +19,11 @@ if (!Directory.Exists(path))
 }
 
 // 1. create a cell list
-List<Cellx> cells = new();
+List<Cellx> cells = [];
 
 // 2. values as an array
-List<string> languages = new()
-{
+List<string> languages =
+[
     "Java", // A
     "C#", // B
     "Javascript", // C
@@ -39,7 +39,7 @@ List<string> languages = new()
     "C++", // M
     "F#", // N
     "2024 June" // O
-};
+];
 
 foreach (string lang in languages)
 {
