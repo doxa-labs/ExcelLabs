@@ -1,27 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Version>2.2.1</Version>
-    <FileVersion>2.2.1</FileVersion>
-    <AssemblyVersion>2.2.1</AssemblyVersion>
-    <Authors>Doxa Labs Ltd</Authors>
-    <Company>Doxa Labs Ltd</Company>
-    <Product>Doxa Lab's Excel Tools</Product>
-    <Description>This tool provides a C# based solution to create Excel files Simple and Fast. This package supports Android, iOS, Linux, macOS and Windows.</Description>
-    <Copyright>© 2019-2023 Doxa Labs Ltd. All Rights Reserved.</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://doxalabs.co.uk</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Excel Office xls xlsx IO C# OpenXml Dataset .NETStandard</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>3.0.3</Version>
+		<FileVersion>3.0.3</FileVersion>
+		<AssemblyVersion>3.0.3</AssemblyVersion>
+		<Authors>Doxa Labs Ltd</Authors>
+		<Company>Doxa Labs Ltd</Company>
+		<Product>Doxa Lab's Excel Tools</Product>
+		<Description>This tool provides a C# based solution to create Excel files Simple and Fast. This package supports Android, iOS, Linux, macOS and Windows.</Description>
+		<Copyright>© 2019-2024 Doxa Labs Ltd. All Rights Reserved.</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://doxalabs.co.uk</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>Excel Office xls xlsx IO C# OpenXml Dataset .NETStandard</PackageTags>
+		<PackageReleaseNotes>.NET 8 Demo and OpenXml v3.0.3</PackageReleaseNotes>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Excel.Labs\Excel.Labs.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Excel.Labs\Excel.Labs.csproj" />
+	</ItemGroup>
 
 </Project>

@@ -39,6 +39,10 @@ PM> Install-Package Excel.Labs
 > dotnet add package Excel.Labs
 ```
 
+#### Release Notes - v3.0.3
+- Fixed issue where temp files were shareable and not deleted on close
+- SaveFileWithCleanXmlText, CleanTextForXml and ColumnIndexToColumnLetter functions added
+
 ### Definition
 
 #### Model
@@ -56,6 +60,11 @@ public class Cellx
 1. Create a Cell List
 2. Add Some Data
 3. Call SaveFile Function
+
+Optionals with June 2024 v3.0.3 Update
+4. Call XML-safe SaveFileWithCleanXmlText Function
+5. Call CleanTextForXml to clean not-allowed XML characters
+6. Call ColumnIndexToColumnLetter to Convert integer to Excel Column Letter like 1 to A
 ```
 
 ```C#
@@ -81,8 +90,9 @@ List<string> languages = new List<string>() {
     "", // K
     "Objective-C", // L
     "C++", // M
-    "F#" // N
-    };
+    "F#", // N
+    "2024 June" // O
+};
     
 foreach (string lang in languages)
 {
@@ -103,6 +113,21 @@ cells.Add(new Cellx(3, "Notepad"));
 
 // call save function
 ExcelLabs.SaveFile(title, path, sheetName, cells);
+
+// call safe save function
+ExcelLabs.SaveFileWithCleanXmlText(title, path, sheetName, cells);
+
+// clean not-allowed XML characters
+string safeToWriteText = ExcelLabs.CleanTextForXml(title + " safe");
+Console.WriteLine("Safe text: " + safeToWriteText);
+
+// convert integer to Excel Column Letter like 1 to A
+string excelColumnLetter1 = ExcelLabs.ColumnIndexToColumnLetter(1);
+Console.WriteLine("1 to column letter: " + excelColumnLetter1); // A
+
+// convert integer to Excel Column Letter like 1 to G
+string excelColumnLetter7 = ExcelLabs.ColumnIndexToColumnLetter(7);
+Console.WriteLine("7 to column letter: " + excelColumnLetter7); // G
 ```
 
 #### Screenshot
@@ -110,7 +135,7 @@ ExcelLabs.SaveFile(title, path, sheetName, cells);
 
 ### Support or Contact
 
-Please visit https://doxalabs.co.uk
+Please visit https://github.com/doxa-labs/ExcelLabs or http://doxalabs.co.uk
 
 ### License
 

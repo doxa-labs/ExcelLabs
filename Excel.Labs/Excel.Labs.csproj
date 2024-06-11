@@ -6,12 +6,12 @@
     <ApplicationIcon>doxalabs-logo.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>2.2.1</Version>
+    <Version>3.0.3</Version>
     <Authors>Doxa Labs Ltd</Authors>
     <Company>Doxa Labs Ltd</Company>
     <Product>Doxa Lab's Excel Tools</Product>
     <Description>This tool provides a C# based solution to create Excel files Simple and Fast. This package supports Android, iOS, Linux, macOS and Windows.</Description>
-    <Copyright>© 2019-2023 Doxa Labs Ltd. All Rights Reserved.</Copyright>
+    <Copyright>© 2019-2024 Doxa Labs Ltd. All Rights Reserved.</Copyright>
     <PackageProjectUrl>https://doxalabs.co.uk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -30,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DocumentFormat.OpenXml" Version="2.9.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.2" />
   </ItemGroup>
 
 </Project>

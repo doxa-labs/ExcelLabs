@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+
 // team
 using Doxa.Labs.Excel.Models;
 
@@ -16,6 +18,11 @@ namespace Excel.Labs.Demo
             // TODO: or, you may change the path
             // TODO: fullpath: C:\Users\...\ExcelLabs\Excel.Labs.Demo\bin\Debug\Files
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Files\";
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
 
             // 1. create a cell list
             List<Cellx> cells = new List<Cellx>();
@@ -35,7 +42,8 @@ namespace Excel.Labs.Demo
                 "", // K
                 "Objective-C", // L
                 "C++", // M
-                "F#" // N
+                "F#", // N
+                "2024 June" // O
             };
 
             foreach (string lang in languages)
@@ -57,6 +65,21 @@ namespace Excel.Labs.Demo
 
             // call save function
             ExcelLabs.SaveFile(title, path, sheetName, cells);
+
+            // call safe save function
+            ExcelLabs.SaveFileWithCleanXmlText(title, path, sheetName, cells);
+
+            // clean not-allowed XML characters
+            string safeToWriteText = ExcelLabs.CleanTextForXml(title + " safe");
+            Console.WriteLine("Safe text: " + safeToWriteText);
+
+            // convert integer to Excel Column Letter like 1 to A
+            string excelColumnLetter1 = ExcelLabs.ColumnIndexToColumnLetter(1);
+            Console.WriteLine("1 to column letter: " + excelColumnLetter1); // A
+
+            // convert integer to Excel Column Letter like 1 to G
+            string excelColumnLetter7 = ExcelLabs.ColumnIndexToColumnLetter(7);
+            Console.WriteLine("7 to column letter: " + excelColumnLetter7); // G
 
             Console.WriteLine("Done. Check the path now to see the Excel file.");
             Console.ReadLine();

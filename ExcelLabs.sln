@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.NET6Demo", "Exce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.NET7Demo", "Excel.Labs.NET7Demo\Excel.Labs.NET7Demo.csproj", "{290D59A3-4EAB-4944-8C4E-7B6B8F017116}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.NET8Demo", "Excel.Labs.NET8Demo\Excel.Labs.NET8Demo.csproj", "{A023889C-6B46-42BD-A634-B224582EEC5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{290D59A3-4EAB-4944-8C4E-7B6B8F017116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{290D59A3-4EAB-4944-8C4E-7B6B8F017116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{290D59A3-4EAB-4944-8C4E-7B6B8F017116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A023889C-6B46-42BD-A634-B224582EEC5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A023889C-6B46-42BD-A634-B224582EEC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A023889C-6B46-42BD-A634-B224582EEC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A023889C-6B46-42BD-A634-B224582EEC5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
