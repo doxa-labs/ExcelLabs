@@ -94,15 +94,22 @@ namespace Doxa.Labs.Excel.Models
                 workbookpart.Workbook.Save();
 
                 // close the document.
-                // Close() is obsolete on DocumentFormat.OpenXml 3.0.2 due to some crash
-                // Check for the details https://github.com/dotnet/Open-XML-SDK/releases/tag/v3.0.2
+                // Close() is obsolete on DocumentFormat.OpenXml 3.0.3 due to some crash
+                // Check for the details https://github.com/dotnet/Open-XML-SDK/releases/tag/v3.0.3
                 //spreadsheetDocument.Close();
 
-                // started using Dispose instead of Close with 3.0.2
+                // started using Dispose instead of Close with 3.0.3
                 spreadsheetDocument.Dispose();
             }
         }
 
+        /// <summary>
+        /// Gets data as a Cellx List format and Save the Excel file as .xlsx + cleans potential not-allowed XML characters
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="path"></param>
+        /// <param name="sheetName"></param>
+        /// <param name="cells"></param>
         public static void SaveFileWithCleanXmlText(string title, string path, string sheetName, List<Cellx> cells)
         {
             // check for null cell list
@@ -177,16 +184,21 @@ namespace Doxa.Labs.Excel.Models
                 workbookpart.Workbook.Save();
 
                 // close the document.
-                // Close() is obsolete on DocumentFormat.OpenXml 3.0.2 due to some crash
-                // Check for the details https://github.com/dotnet/Open-XML-SDK/releases/tag/v3.0.2
+                // Close() is obsolete on DocumentFormat.OpenXml 3.0.3 due to some crash
+                // Check for the details https://github.com/dotnet/Open-XML-SDK/releases/tag/v3.0.3
                 //spreadsheetDocument.Close();
 
-                // started using Dispose instead of Close with 3.0.2
+                // started using Dispose instead of Close with 3.0.3
                 spreadsheetDocument.Dispose();
             }
         }
 
-        private static string CleanTextForXml(string text)
+        /// <summary>
+        /// Cleans potential not-allowed XML characters
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string CleanTextForXml(string text)
         {
             if (string.IsNullOrEmpty(text))
             {
@@ -204,6 +216,28 @@ namespace Doxa.Labs.Excel.Models
             {
                 return "-";
             }
+        }
+
+        /// <summary>
+        /// Convert integers to string like 1 to A, 2 to B, 3 to C. You can write your text in different columns by using this function
+        /// Find details https://stackoverflow.com/questions/181596/how-to-convert-a-column-number-e-g-127-into-an-excel-column-e-g-aa
+        /// </summary>
+        /// <param name="columnIndex"></param>
+        /// <returns></returns>
+        public static string ColumnIndexToColumnLetter(int columnIndex)
+        {
+            var index = columnIndex;
+            var columnLetter = string.Empty;
+            int mod;
+
+            while (index > 0)
+            {
+                mod = (index - 1) % 26;
+                columnLetter = (char)(65 + mod) + columnLetter;
+                index = (index - mod) / 26;
+            }
+
+            return columnLetter;
         }
 
         /// <summary>

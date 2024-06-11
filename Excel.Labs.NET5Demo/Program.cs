@@ -67,6 +67,21 @@ namespace Excel.Labs.NET5Demo
             // call save function
             ExcelLabs.SaveFile(title, path, sheetName, cells);
 
+            // call safe save function
+            ExcelLabs.SaveFileWithCleanXmlText(title, path, sheetName, cells);
+
+            // clean not-allowed XML characters
+            string safeToWriteText = ExcelLabs.CleanTextForXml(title + " safe");
+            Console.WriteLine("Safe text: " + safeToWriteText);
+
+            // convert integer to Excel Column Letter like 1 to A
+            string excelColumnLetter1 = ExcelLabs.ColumnIndexToColumnLetter(1);
+            Console.WriteLine("1 to column letter: " + excelColumnLetter1); // A
+
+            // convert integer to Excel Column Letter like 1 to G
+            string excelColumnLetter7 = ExcelLabs.ColumnIndexToColumnLetter(7);
+            Console.WriteLine("7 to column letter: " + excelColumnLetter7); // G
+
             Console.WriteLine("Done. Check the path now to see the Excel file.");
             Console.ReadLine();
         }

@@ -5,9 +5,9 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>3.0.2</Version>
-		<FileVersion>3.0.2</FileVersion>
-		<AssemblyVersion>3.0.2</AssemblyVersion>
+		<Version>3.0.3</Version>
+		<FileVersion>3.0.3</FileVersion>
+		<AssemblyVersion>3.0.3</AssemblyVersion>
 		<Authors>Doxa Labs Ltd</Authors>
 		<Company>Doxa Labs Ltd</Company>
 		<Product>Doxa Lab's Excel Tools</Product>
@@ -18,7 +18,7 @@
 		<RepositoryUrl>https://github.com/doxa-labs/ExcelLabs.git</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>Excel Office xls xlsx IO C# OpenXml Dataset .NETStandard</PackageTags>
-		<PackageReleaseNotes>.NET 8 Demo and OpenXml v3.0.2</PackageReleaseNotes>
+		<PackageReleaseNotes>.NET 8 Demo and OpenXml v3.0.3</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
