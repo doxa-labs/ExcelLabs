@@ -39,7 +39,9 @@ PM> Install-Package Excel.Labs
 > dotnet add package Excel.Labs
 ```
 
-#### Release Notes - v3.0.3
+#### Release Notes - v3.0.4 - June 2026
+- .NET 10 support
+- DocumentFormat.OpenXml 3.5.1
 - Fixed issue where temp files were shareable and not deleted on close
 - SaveFileWithCleanXmlText, CleanTextForXml and ColumnIndexToColumnLetter functions added
 

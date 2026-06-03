@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31912.275
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.Demo", "Excel.Labs.Demo\Excel.Labs.Demo.csproj", "{F7865782-3D3D-4328-8B78-CEF60812EADC}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.Labs.NET7Demo", "Excel.Labs.NET7Demo\Excel.Labs.NET7Demo.csproj", "{290D59A3-4EAB-4944-8C4E-7B6B8F017116}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.NET8Demo", "Excel.Labs.NET8Demo\Excel.Labs.NET8Demo.csproj", "{A023889C-6B46-42BD-A634-B224582EEC5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.Labs.NET10Demo", "Excel.Labs.NET10Demo\Excel.Labs.NET10Demo.csproj", "{9704FD97-0C81-4C92-A42C-DF7B0A0ED099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A023889C-6B46-42BD-A634-B224582EEC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A023889C-6B46-42BD-A634-B224582EEC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A023889C-6B46-42BD-A634-B224582EEC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9704FD97-0C81-4C92-A42C-DF7B0A0ED099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9704FD97-0C81-4C92-A42C-DF7B0A0ED099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9704FD97-0C81-4C92-A42C-DF7B0A0ED099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9704FD97-0C81-4C92-A42C-DF7B0A0ED099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
